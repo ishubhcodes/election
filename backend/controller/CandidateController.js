@@ -1,4 +1,5 @@
 const Candidatemodel= require('../models/candidateloginmodel');
+const {generateToken} = require('../middleware/authorization')
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
@@ -29,6 +30,14 @@ const signup= async (req,res)=>{
       })
 
       await candidate.save();
+
+      const token = generateToken({
+         uid: candidate.uid,
+         email: candidate.email
+      });
+      
+      console.log(token);
+      
       res.status(201).json({
          success:true,
          message:"Account created successfully"
