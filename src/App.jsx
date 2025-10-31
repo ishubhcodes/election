@@ -1,13 +1,24 @@
 import { useState } from 'react'
 import './App.css'
-import VoteDemo from "./pages/VoteDemo";
-import { Toaster } from "sonner";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Steps from "./pages/Steps";
+import Rules from "./pages/Rules";
+import Demo from "./pages/VoteDemo";
 
 export default function App() {
   return( 
-    <>
-    <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-96 h-16' }} />
-    <VoteDemo/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/steps" element={<Steps />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/rules" element={<Rules />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/demo" element={<Demo />} />
+      </Routes>
+    </Router>
   );
 }
