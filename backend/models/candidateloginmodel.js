@@ -8,7 +8,7 @@ const candidateloginschema = new mongoose.Schema({
         required: true,
         default: uuidv4
     },
-    phone_number: {
+    email: {
         type: String,
         required: true,
         unique: true,
