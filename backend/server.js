@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 
 const app = express();
 
-dotenv.config({ path: "./.env" });
+dotenv.config({ path: "../.env" });
 const port = process.env.PORT || 4000;
 const url = process.env.DB_URL;
 
