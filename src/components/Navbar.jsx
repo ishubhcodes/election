@@ -11,11 +11,7 @@ export default function Navbar() {
     { icon: Users, label: 'Candidates', path: '/candidates' },
     { icon: BookOpen, label: 'Rules', path: '/rules' },
     { icon: CheckCircle, label: 'Steps', path: '/steps' },
-<<<<<<< HEAD
-    { icon: User, label: 'Practice', path: '/voteinfo' },
-=======
-    { icon: User, label: 'Practice', path: '/practice' },
->>>>>>> 601d96fdeadf5d0511af3f4a25c97a59e6aecd0d
+    { icon: User, label: 'Practice', path: '/demo' },
   ];
 
   const handleNavigation = (path) => {
