@@ -2,10 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const postRoutes = require('./routes/imageroute');
+// const postRoutes = require('./routes/imageroute');
 const profileRoutes = require('./routes/candidateprofile');
 const expertRoutes = require('./routes/expertroutes');
-const upload = require('../config/multerConfig');
+const upload = require('./config/multerConfig');
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(
 );
 app.use(cors());
 
-app.use('/api/posts', postRoutes);
+// app.use('/api/posts', postRoutes);r
 app.use('/api/candidate', profileRoutes);
 app.use('/api/expert', expertRoutes)
 
