@@ -1,5 +1,24 @@
 const mongoose = require('mongoose');
 
+const imageSchema = new mongoose.Schema({
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  cloudinaryId: {
+    type: String,
+    required: true
+  },
+  mimeType: {
+    type: String,
+    required: true
+  },
+  uploadedAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
 const candidateProfileSchema = new mongoose.Schema({
    uid: {
         type: String,
@@ -34,7 +53,9 @@ const candidateProfileSchema = new mongoose.Schema({
         type:String,
         enum: ['Pending', 'Approved', 'Rejected'],
         default: 'Pending'
-    }
+    },
+    images: [imageSchema],
+    symbol:[imageSchema]
 }
 )
 
