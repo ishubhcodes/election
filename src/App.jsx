@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import VoteDemo from "./pages/VoteDemo";
+import { Toaster } from "sonner";
 
 export default function App() {
-  return (
-    <h1 className="text-4xl font-bold text-rose-500">
-      Tailwind v4 is Working 🎉
-    </h1>
+  return( 
+    <>
+    <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-96 h-16' }} />
+    <VoteDemo/>
+    </>
   );
 }

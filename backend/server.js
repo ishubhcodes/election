@@ -1,7 +1,9 @@
-import express from "express";
-import mongoose from "mongoose";
-import cors from "cors";
-import dotenv from "dotenv";
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const postRoutes = require('./routes/sample');
+const profileRoutes = require('./routes/candidateprofile');
 
 const app = express();
 
@@ -19,6 +21,8 @@ app.use(
 );
 app.use(cors());
 
+app.use('/api/posts', postRoutes);
+app.use('/api/candidate', profileRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err); 
