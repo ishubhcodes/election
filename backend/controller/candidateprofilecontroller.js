@@ -1,8 +1,8 @@
 const CandidateProfile= require('../models/candidateprofilemodel')
 const setupprofile = async (req, res) => {
     try {
-        const { name, affiliation, electoralconstituency, agenda } = req.body;
-        const uid = req.user.uid;
+        const { uid, name, affiliation, electoralconstituency, agenda } = req.body;
+        // const uid = req.user.uid;
         const newCandidate = new CandidateProfile({
             uid,
             name,
