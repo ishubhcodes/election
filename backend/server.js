@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // const postRoutes = require('./routes/imageroute');
 const profileRoutes = require('./routes/candidateprofile');
 const expertRoutes = require('./routes/expertroutes');
-const upload = require('./config/multerConfig');
+const imageroute = require("./routes/imageroute");
 
 const app = express();
 
@@ -25,7 +25,8 @@ app.use(cors());
 
 // app.use('/api/posts', postRoutes);r
 app.use('/api/candidate', profileRoutes);
-app.use('/api/expert', expertRoutes)
+app.use('/api/expert', expertRoutes);
+app.use('/api/images',imageroute);
 
 app.use((err, req, res, next) => {
   console.error(err); 
