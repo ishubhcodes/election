@@ -12,9 +12,9 @@ const signup= async (req,res)=>{
            message: "Please insert the required information",
            });
         }
-      const existingUser = await Candidatemodel.findOne({ email });
+      const existingCandidate = await Candidatemodel.findOne({ email });
 
-      if (existingUser) {
+      if (existingCandidate) {
          return res.status(400).json({ 
             success: false,
             message: "Email already exists" 
