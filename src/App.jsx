@@ -6,11 +6,15 @@ import Rules from "./pages/Rules";
 import Demo from "./pages/VoteDemo";
 import VoteInfo from "./pages/VoteInfo";
 import { Toaster } from "sonner";
-
+import Home from "./pages/Home";
 
 export default function App() {
   return( 
     <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
       <Routes>
         <Route path="/steps" element={<Steps />} />
       </Routes>
