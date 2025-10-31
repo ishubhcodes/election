@@ -6,11 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Steps from "./pages/Steps";
 
 export default function App() {
-  return (
-    // <h1 className="text-4xl font-bold text-rose-500">
-    //   Tailwind v4 is Working 🎉
-    // </h1>
-
+  return( 
     <Router>
       <Routes>
         <Route path="/steps" element={<Steps />} /> {/* temporary */}

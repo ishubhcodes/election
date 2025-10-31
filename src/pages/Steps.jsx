@@ -1,84 +1,31 @@
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
-// import { CandidatesSection } from "./components/CandidatesSection";
-// import { RulesSection } from "./components/RulesSection";
-// import { ElectionStepsSection } from "./components/ElectionStepsSection";
-// import { MockElectionSection } from "./components/MockElectionSection";
-// import { Vote, BookOpen, CheckCircle, Users } from "lucide-react";
+import ElectionStepsSection  from "../components/ElectionSteps.jsx";
+import Footer from "../components/Footer.jsx";
+import Header from "../components/Header.jsx";
+import { BookOpen, CheckCircle, Users } from "lucide-react";
 
 export default function App() {
   return (
-    // <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-    //   {/* Header */}
-    //   <header className="bg-white border-b shadow-sm">
-    //     <div className="max-w-6xl mx-auto px-4 py-6">
-    //       <div className="flex items-center gap-3">
-    //         <Vote className="w-8 h-8 text-blue-600" />
-    //         <div>
-    //           <h1 className="text-blue-900">Election Learning Center</h1>
-    //           <p className="text-sm text-gray-600">Learn how democracy works</p>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </header>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white w-full" style={{ margin: 0, padding: 0 }}>
+  <Header/>
 
-    //   {/* Hero Section */}
-    //   <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
-    //     <div className="max-w-6xl mx-auto px-4 text-center">
-    //       <h2 className="text-white mb-4">Welcome to Your Election Guide</h2>
-    //       <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-    //         Everything you need to know about voting, candidates, and how elections work - designed for beginners
-    //       </p>
-    //     </div>
-    //   </section>
+  {/* Hero Section - Full width */}
+  <div class="bg-gradient-to-b from-white to-blue-50 py-12 px-4 text-center border-b border-gray-100">
+  <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider block mb-3">
+    Your Guide To
+  </span>
+  <h1 class="text-4xl font-bold text-gray-900 mb-4">
+    Election Process
+  </h1>
+  <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+    What to do before and after voting?
+  </p>
+</div>
 
-    //   {/* Main Content */}
-    //   <main className="max-w-6xl mx-auto px-4 py-8">
-    //     <Tabs defaultValue="candidates" className="w-full">
-    //       <TabsList className="grid w-full grid-cols-4 mb-8">
-    //         <TabsTrigger value="candidates" className="flex items-center gap-2">
-    //           <Users className="w-4 h-4" />
-    //           <span className="hidden sm:inline">Candidates</span>
-    //         </TabsTrigger>
-    //         <TabsTrigger value="rules" className="flex items-center gap-2">
-    //           <BookOpen className="w-4 h-4" />
-    //           <span className="hidden sm:inline">Rules</span>
-    //         </TabsTrigger>
-    //         <TabsTrigger value="steps" className="flex items-center gap-2">
-    //           <CheckCircle className="w-4 h-4" />
-    //           <span className="hidden sm:inline">Steps</span>
-    //         </TabsTrigger>
-    //         <TabsTrigger value="practice" className="flex items-center gap-2">
-    //           <Vote className="w-4 h-4" />
-    //           <span className="hidden sm:inline">Practice</span>
-    //         </TabsTrigger>
-    //       </TabsList>
+  {/* Election Steps - Full width */}
+  <ElectionStepsSection />
+  
+  <Footer/>
+</div>
 
-    //       <TabsContent value="candidates">
-    //         <CandidatesSection />
-    //       </TabsContent>
-
-    //       <TabsContent value="rules">
-    //         <RulesSection />
-    //       </TabsContent>
-
-    //       <TabsContent value="steps">
-    //         <ElectionStepsSection />
-    //       </TabsContent>
-
-    //       <TabsContent value="practice">
-    //         <MockElectionSection />
-    //       </TabsContent>
-    //     </Tabs>
-    //   </main>
-
-    //   {/* Footer */}
-    //   <footer className="bg-gray-100 border-t mt-16">
-    //     <div className="max-w-6xl mx-auto px-4 py-6 text-center text-gray-600">
-    //       <p>© 2025 Election Learning Center - Empowering Democracy</p>
-    //     </div>
-    //   </footer>
-    // </div>
-
-    <h1>hi</h1>
   );
 }
