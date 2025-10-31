@@ -4,10 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Steps from "./pages/Steps";
 import Rules from "./pages/Rules";
 import Demo from "./pages/VoteDemo";
+import Home from "./pages/Home";
 
 export default function App() {
   return( 
     <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
       <Routes>
         <Route path="/steps" element={<Steps />} />
       </Routes>
