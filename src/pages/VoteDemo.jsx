@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import { toast } from "sonner"; // ✅ using Sonner
-
+import { toast } from "sonner";
+import swastik from '../assets/swastik.png';
 const NUM_COLUMNS = 6;
-const CELL_SIZE = 120;
 const TOTAL_CELLS = 60;
+const NUMBER_COL_WIDTH = 50; // left numbering column width
+const CELL_WIDTH = 140; // width of voting cells
+const CELL_HEIGHT = 120; // height of each cell
 
 export default function VoteDemo() {
   const [placedCell, setPlacedCell] = useState(null);
@@ -17,33 +19,41 @@ export default function VoteDemo() {
     offsetX: 0,
     offsetY: 0,
     x: 20,
-    y: 60
+    y: 60,
   });
 
-  const symbols = new Array(TOTAL_CELLS).fill(null);
+  function toNepali(num) {
+  const nep = ["०","१","२","३","४","५","६","७","८","९"];
+  return num.toString().split("").map(d => nep[d]).join("");
+}
 
+  const symbols = new Array(TOTAL_CELLS).fill(null);
+  const rows = Math.ceil(TOTAL_CELLS / NUM_COLUMNS);
+
+  // Compute grid cell positions for drag detection
   useEffect(() => {
     function computeRects() {
       const grid = gridRef.current;
       if (!grid) return;
       const rects = [];
       const gridRect = grid.getBoundingClientRect();
-      const rows = Math.ceil(TOTAL_CELLS / NUM_COLUMNS);
+
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < NUM_COLUMNS; c++) {
-          const left = gridRect.left + c * CELL_SIZE;
-          const top = gridRect.top + r * CELL_SIZE;
+          const left = gridRect.left + NUMBER_COL_WIDTH + c * CELL_WIDTH;
+          const top = gridRect.top + CELL_HEIGHT + r * CELL_HEIGHT; // offset for header
           rects.push({
             row: r,
             col: c,
             left,
             top,
-            right: left + CELL_SIZE,
-            bottom: top + CELL_SIZE,
-            index: r * NUM_COLUMNS + c
+            right: left + CELL_WIDTH,
+            bottom: top + CELL_HEIGHT,
+            index: r * NUM_COLUMNS + c,
           });
         }
       }
+
       cellRectsRef.current = rects;
     }
 
@@ -54,24 +64,25 @@ export default function VoteDemo() {
       window.removeEventListener("scroll", computeRects, true);
       window.removeEventListener("resize", computeRects);
     };
-  }, []);
+  }, [rows]);
 
+  // Drag and drop logic
   useEffect(() => {
     function onPointerMove(e) {
       if (!drag.dragging) return;
       const x = e.clientX - drag.offsetX;
       const y = e.clientY - drag.offsetY;
-      setDrag(d => ({ ...d, x, y }));
+      setDrag((d) => ({ ...d, x, y }));
     }
 
     function onPointerUp() {
       if (!drag.dragging) return;
-      setDrag(d => ({ ...d, dragging: false }));
+      setDrag((d) => ({ ...d, dragging: false }));
 
       const stampEl = stampRef.current;
       const stampRect = stampEl.getBoundingClientRect();
 
-      const intersecting = cellRectsRef.current.filter(cell => {
+      const intersecting = cellRectsRef.current.filter((cell) => {
         return !(
           stampRect.right <= cell.left ||
           stampRect.left >= cell.right ||
@@ -83,7 +94,7 @@ export default function VoteDemo() {
       if (intersecting.length === 0) return;
 
       if (intersecting.length > 1) {
-        toast.error("Invalid Vote — stamp overlaps multiple cells"); // ✅ Sonner
+        toast.error("Invalid Vote — stamp overlaps multiple cells");
         return;
       }
 
@@ -97,17 +108,17 @@ export default function VoteDemo() {
         Math.abs(stampRect.bottom - cell.bottom) <= TOL;
 
       if (touchesEdge) {
-        toast.error("Invalid Vote — stamp touches border"); // ✅ Sonner
+        toast.error("Invalid Vote — stamp touches border");
         return;
       }
 
       setPlacedCell(cell);
-      toast.success("Valid Vote ✅"); // ✅ Sonner
+      toast.success("Valid Vote ✅");
 
-      setDrag(d => ({
+      setDrag((d) => ({
         ...d,
-        x: cell.left + CELL_SIZE / 2 - stampRect.width / 2,
-        y: cell.top + CELL_SIZE / 2 - stampRect.height / 2
+        x: cell.left + CELL_WIDTH / 2 - stampRect.width / 2,
+        y: cell.top + CELL_HEIGHT / 2 - stampRect.height / 2,
       }));
     }
 
@@ -122,22 +133,21 @@ export default function VoteDemo() {
   function onStampPointerDown(e) {
     e.preventDefault();
     const rect = stampRef.current.getBoundingClientRect();
-    setDrag(d => ({
+    setDrag((d) => ({
       ...d,
       dragging: true,
       offsetX: e.clientX - rect.left,
-      offsetY: e.clientY - rect.top
+      offsetY: e.clientY - rect.top,
     }));
     setPlacedCell(null);
   }
 
   return (
     <div className="flex gap-6 p-6 font-sans">
-
       {/* Stamp */}
       <div className="w-40 text-center">
         <img
-          src="/stamp.png"
+          src={swastik}
           ref={stampRef}
           onPointerDown={onStampPointerDown}
           draggable={false}
@@ -151,37 +161,100 @@ export default function VoteDemo() {
       <div
         ref={gridRef}
         className="overflow-auto border-2 border-black bg-white p-2"
-        style={{ width: NUM_COLUMNS * CELL_SIZE + 20 }}
+        style={{ width: NUMBER_COL_WIDTH + NUM_COLUMNS * CELL_WIDTH }}
       >
         <div
-          className="grid bg-white border-2 border-black"
+          className="grid border-2 border-black"
           style={{
-            gridTemplateColumns: `repeat(${NUM_COLUMNS}, ${CELL_SIZE}px)`
+            gridTemplateColumns: `${NUMBER_COL_WIDTH}px repeat(${NUM_COLUMNS}, ${CELL_WIDTH}px)`,
           }}
         >
-          {symbols.map((_, idx) => {
-            const isPlaced = placedCell?.index === idx;
-            return (
-              <div
-                key={idx}
-                className="border border-black relative flex items-center justify-center bg-white"
-                style={{ width: CELL_SIZE, height: CELL_SIZE }}
-              >
-                {isPlaced && (
-                  <img
-                    src="/stamp.png"
-                    className="absolute w-16 h-16 pointer-events-none"
-                    style={{
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)"
-                    }}
-                    draggable={false}
-                  />
-                )}
-              </div>
-            );
-          })}
+          {/* Top-left empty corner */}
+          <div className="border border-black bg-gray-200" />
+
+          {/* Header row */}
+          <div
+            className="border border-black bg-gray-200 flex items-center justify-center "
+            style={{ height: CELL_HEIGHT -30 }}
+          >
+            मतपत्र - १ <br /> प्रमुख/अध्यक्ष
+          </div>
+          <div
+            className="border border-black bg-gray-200 flex items-center justify-center "
+            style={{ height: CELL_HEIGHT -30 }}
+          >
+            मतपत्र - २ <br /> उपप्रमुख/उपअध्यक्ष
+          </div>
+          <div
+            className="border border-black bg-gray-200 flex items-center justify-center"
+            style={{ height: CELL_HEIGHT -30   }}
+          >
+            मतपत्र - ३ <br /> वडा अध्यक्ष
+          </div>
+          <div
+            className="border border-black bg-gray-200 flex items-center justify-center"
+            style={{ height: CELL_HEIGHT -30  }}
+          >
+            मतपत्र - ४ <br /> महिला वडा सदस्य
+          </div>
+          <div
+            className="border border-black bg-gray-200 flex items-center justify-center"
+            style={{ height: CELL_HEIGHT -30 }}
+          >
+            मतपत्र - ५ <br /> दलित महिला वडा सदस्य
+          </div>
+          <div
+            className="border border-black bg-gray-200 flex items-center justify-center"
+            style={{ height: CELL_HEIGHT -30 }}
+          >
+            मतपत्र - ६
+          </div>
+
+          {/* Data rows */}
+          {Array(rows)
+            .fill(0)
+            .map((_, r) =>
+              Array(NUM_COLUMNS + 1)
+                .fill(0)
+                .map((_, c) => {
+                  // Numbering column
+                  if (c === 0) {
+                    return (
+                      <div
+                        key={`number-${r}`}
+                        className="border border-black flex items-center justify-center bg-gray-100 font-semibold"
+                        style={{ width: NUMBER_COL_WIDTH, height: CELL_HEIGHT }}
+                      >
+                        {toNepali(r + 1)}
+                      </div>
+                    );
+                  }
+
+                  const cellIdx = r * NUM_COLUMNS + (c - 1);
+                  const isPlaced = placedCell?.index === cellIdx;
+
+                  return (
+                    <div
+                      key={`cell-${r}-${c}`}
+                      className="border border-black relative flex items-center justify-center bg-white"
+                      style={{ width: CELL_WIDTH, height: CELL_HEIGHT }}
+                    >
+                      {isPlaced && (
+                        <img
+                          src={swastik}
+                          className="absolute w-16 h-16 pointer-events-none"
+                          style={{
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                          }}
+                          draggable={false}
+                        />
+                      )}
+                    </div>
+                  );
+                })
+            )}
         </div>
       </div>
     </div>
