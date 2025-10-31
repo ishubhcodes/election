@@ -2,8 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const postRoutes = require('./routes/sample');
+const postRoutes = require('./routes/imageroute');
 const profileRoutes = require('./routes/candidateprofile');
+const upload = require('../config/multerConfig');
 
 const app = express();
 
