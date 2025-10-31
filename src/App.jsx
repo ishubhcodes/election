@@ -7,14 +7,16 @@ import Demo from "./pages/VoteDemo";
 import VoteInfo from "./pages/VoteInfo";
 import { Toaster } from "sonner";
 import Home from "./pages/Home";
+import Navbar from './components/Navbar';
+
 
 export default function App() {
   return( 
     <Router>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-
       <Routes>
         <Route path="/steps" element={<Steps />} />
       </Routes>
@@ -27,7 +29,7 @@ export default function App() {
         <Routes>
         <Route path="/voteinfo" element={<VoteInfo />} />
       </Routes>
-      <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-96 h-16' }} />
+      <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-120 h-18' }} />
     </Router>
 
   );

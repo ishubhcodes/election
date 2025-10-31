@@ -1,4 +1,5 @@
-import { Shield, FileCheck, Calendar, MapPin } from "lucide-react";
+import { FileCheck, Calendar, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function VoteInfo() {
   return (
@@ -6,7 +7,7 @@ export default function VoteInfo() {
       <div className="max-w-5xl mx-auto space-y-10">
         {/* Header */}
         <div className="space-y-2">
-          <h1 className="text-4xl font-semibold text-gray-900 tracking-tight">
+          <h1 className="text-4xl font-semibold text-red-900 tracking-tight">
             Practice Voting in the Ballot Paper
           </h1>
           <p className="text-gray-600 text-base font-normal">
@@ -19,8 +20,8 @@ export default function VoteInfo() {
           {/* Ballot Paper Description */}
           <div className="bg-gray-100 rounded-lg p-6">
             <div className="flex items-center gap-3 mb-3">
-              <Calendar className="w-5 h-5 text-gray-700" />
-              <h2 className="text-lg font-medium text-gray-800">Ballot Paper Description</h2>
+              <Calendar className="w-5 h-5 text-red-800" />
+              <h2 className="text-lg font-medium text-red-800">Ballot Paper Description</h2>
             </div>
             <p className="text-gray-700 text-base font-normal mb-2">Ballot Paper consists of:</p>
             <ul className="list-disc list-inside text-base text-gray-700 font-normal space-y-1">
@@ -33,8 +34,8 @@ export default function VoteInfo() {
           {/* Fill Instruction */}
           <div className="bg-gray-100 rounded-lg p-6">
             <div className="flex items-center gap-3 mb-3">
-              <FileCheck className="w-5 h-5 text-gray-700" />
-              <h2 className="text-lg font-medium text-gray-800">Fill the Ballot Paper</h2>
+              <FileCheck className="w-5 h-5 text-red-700" />
+              <h2 className="text-lg font-medium text-red-800">Fill the Ballot Paper</h2>
             </div>
             <p className="text-gray-700 text-base font-normal">
               Take the stamp from the side and click inside the cell where you want to cast your vote.
@@ -44,8 +45,8 @@ export default function VoteInfo() {
           {/* Errors */}
           <div className="bg-gray-100 rounded-lg p-6">
             <div className="flex items-center gap-3 mb-3">
-              <MapPin className="w-5 h-5 text-gray-700" />
-              <h2 className="text-lg font-medium text-gray-800">Errors to Avoid</h2>
+              <MapPin className="w-5 h-5 text-red-700" />
+              <h2 className="text-lg font-medium text-red-800">Errors to Avoid</h2>
             </div>
             <p className="text-gray-700 text-base font-normal mb-2">
               Failing to follow these rules may result in an invalid vote:
@@ -59,9 +60,9 @@ export default function VoteInfo() {
         </div>
 
         {/* Button */}
-        <button className="w-full bg-red-700 text-white text-center py-4 rounded-lg text-base font-medium hover:bg-red-800 transition-colors">
-          Practice Voting
-        </button>
+       <Link to="/demo" className="w-full bg-sky-700 text-white text-center py-4 rounded-lg text-base font-medium hover:bg-sky-800 transition-colors block">
+       Practice Voting
+       </Link>
       </div>
     </div>
   );
