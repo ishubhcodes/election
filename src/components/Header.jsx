@@ -17,7 +17,7 @@ export default function Header() {
             <Vote className="w-8 h-8 text-blue-600" />
             <div>
               <h1 className="text-lg font-semibold text-blue-900">
-                Election Learning Center
+                NepalVotes
               </h1>
               <p className="text-sm text-gray-600">
                 Learn how democracy works

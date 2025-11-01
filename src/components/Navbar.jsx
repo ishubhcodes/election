@@ -1,7 +1,7 @@
-import { Users, BookOpen, CheckCircle, User, Menu, X } from 'lucide-react';
+import { Users, BookOpen, CheckCircle, User, Menu, X, ClipboardCheck } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useLanguage } from '@/context/language-context'; // your language context hook
+import { useLanguage } from '../context/language-context'; // your language context hook
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +16,7 @@ export default function Navbar() {
     { icon: BookOpen, label: 'Rules', path: '/rules' },
     { icon: CheckCircle, label: 'Steps', path: '/steps' },
     { icon: User, label: 'Practice', path: '/voteinfo' },
+    { icon: ClipboardCheck, label: 'Quiz', path: '/quiz' },
   ];
 
   const handleNavigation = (path) => {

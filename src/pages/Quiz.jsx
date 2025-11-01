@@ -1,4 +1,4 @@
-import { useLanguage } from "@/context/language-context"
+import { useLanguage } from "../context/language-context"
 import { useState } from "react"
 import { quizQuestions } from "../data/quiz"
 
@@ -187,7 +187,7 @@ export default function QuizPage() {
                   disabled={selectedAnswer === null}
                   className="flex-1 bg-[grey] text-white px-4 py-2 rounded-lg text-lg disabled:opacity-50"
                 >
-                  Submit Answer
+                {t("quiz.submit")}
                 </button>
               ) : (
                 <button

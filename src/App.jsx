@@ -10,6 +10,7 @@ import Candidates from "./pages/Candidates";
 import { Toaster } from "sonner";
 import Home from "./pages/Home";
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import QuizPage from './pages/Quiz';
 import { LanguageProvider } from "./context/language-context"
 
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/candidates" element={<Candidates />} />
       </Routes>
       <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-120 h-18' }} />
+      <Footer/>
       </LanguageProvider>
     </Router>
 
