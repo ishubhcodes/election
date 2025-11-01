@@ -18,7 +18,7 @@ export default function Home() {
     },
     {
       icon: BookOpen,
-      value: "3500",
+      value: "3,500",
       label: "Quiz Completions"
     }
   ];
