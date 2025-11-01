@@ -12,12 +12,11 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
-    "nav.home": "Home",
-    "nav.election": "Election Steps",
     "nav.candidates": "Candidates",
-    "nav.practice": "Practice Election",
+    "nav.rules": "Rules",
+    "nav.steps": "Steps",
+    "nav.practice": "Practice",
     "nav.quiz": "Quiz",
-    "nav.about": "About",
 
     // Home
     "home.title": "SmartVote Nepal",
@@ -171,12 +170,11 @@ const translations: Record<Language, Record<string, string>> = {
   },
   ne: {
     // Navigation
-    "nav.home": "होम",
-    "nav.election": "मतदानको चरण",
-    "nav.candidates": "उम्मेदवारहरु",
-    "nav.practice": "अभ्यास मतदान",
-    "nav.quiz": "प्रश्नोत्तरी",
-    "nav.about": "बारे",
+    "nav.candidates": "उम्मेदवारहरू",
+    "nav.rules": "नियमहरू",
+    "nav.steps": "चरणहरू",
+    "nav.practice": "अभ्यास",
+    "nav.quiz": "प्रश्नोत्तर",
 
     // Home
     "home.title": "स्मार्टभोट नेपाल",
