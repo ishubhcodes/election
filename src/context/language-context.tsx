@@ -120,6 +120,41 @@ const translations: Record<Language, Record<string, string>> = {
 
     "voteInfo.practiceButton": "Practice Voting",
 
+    // Election Rules Page
+"rules.title": "Election Guidelines",
+"rules.subtitle": "Understand the basic rules and requirements for voting",
+"rules.guideTag": "Your Guide To",
+
+"rules.whoCanVote.title": "Who Can Vote?",
+"rules.whoCanVote.point1": "Must be 18 years or older on election day",
+"rules.whoCanVote.point2": "Must be a citizen of the country",
+"rules.whoCanVote.point3": "Must be registered to vote in your district",
+"rules.whoCanVote.point4": "Must have a valid form of identification",
+
+"rules.dates.title": "Important Dates",
+"rules.dates.registration": "Voter Registration Deadline",
+"rules.dates.early": "Early Voting Period",
+"rules.dates.election": "Election Day",
+"rules.dates.registration.value": "November 16, 2025",
+"rules.dates.early.value": "To be determined",
+"rules.dates.election.value": "March 5, 2026",
+
+"rules.faq.title": "Frequently Asked Questions",
+"rules.faq.q1": "What do I need to bring to vote?",
+"rules.faq.a1": "You must bring your voter id along with a valid form of identification such as a driver's license, passport, state ID card, or other government-issued ID.",
+
+"rules.faq.q2": "Can I vote by mail?",
+"rules.faq.a2": "No, currently you can only vote physically. Visit the nearest polling station to cast your vote.",
+
+"rules.faq.q3": "Where do I vote?",
+"rules.faq.a3": "Your polling location is based on your registered address. Check your official election office website for details.",
+
+"rules.faq.q4": "What if I make a mistake on my ballot?",
+"rules.faq.a4": "Ask a poll worker for a new ballot. Do not try to correct mistakes yourself.",
+
+"rules.help": "Help",
+
+
   },
   ne: {
     // Navigation
@@ -226,6 +261,41 @@ const translations: Record<Language, Record<string, string>> = {
     "voteInfo.errors.point3": "प्रत्येक स्तम्भमा केवल एक कोष मात्र चयन गर्नुहोस्।",
 
     "voteInfo.practiceButton": "अभ्यास मतदान",
+
+    // Election Rules Page
+"rules.title": "निर्वाचन मार्गदर्शन",
+"rules.subtitle": "मतदानका आधारभूत नियम र आवश्यकताहरू बुझ्नुहोस्",
+"rules.guideTag": "तपाईंको मार्गदर्शक",
+
+"rules.whoCanVote.title": "कसले मत दिन सक्छ?",
+"rules.whoCanVote.point1": "मतदानको दिन १८ वर्ष वा सोभन्दा माथि हुनु पर्ने",
+"rules.whoCanVote.point2": "देशको नागरिक हुनु पर्ने",
+"rules.whoCanVote.point3": "आफ्नो क्षेत्रमा मतदाता दर्ता भएको हुनु पर्ने",
+"rules.whoCanVote.point4": "मान्य परिचय पत्र हुनु पर्ने",
+
+"rules.dates.title": "महत्वपूर्ण मिति",
+"rules.dates.registration": "मतदाता दर्ता गर्ने अन्तिम मिति",
+"rules.dates.early": "पहिले मतदान अवधि",
+"rules.dates.election": "मतदानको दिन",
+"rules.dates.registration.value": "नोभेम्बर १६, २०२५",
+"rules.dates.early.value": "निर्धारित हुन बाँकी",
+"rules.dates.election.value": "मार्च ५, २०२६",
+
+"rules.faq.title": "धेरै सोधिने प्रश्नहरू",
+"rules.faq.q1": "मत दिन के लिए ल्याउनुपर्छ?",
+"rules.faq.a1": "मतदाता परिचयपत्र साथमा मान्य सरकारी परिचयपत्र (जस्तै नागरिकता, राहदानी वा सरकारी आईडी) ल्याउनुहोस्।",
+
+"rules.faq.q2": "के म हुलाकमार्फत मत दिन सक्छु?",
+"rules.faq.a2": "अहिले हुलाकमार्फत मतदान उपलब्ध छैन। नजिकको मतदान केन्द्रमा गएर मत दिनुहोस्।",
+
+"rules.faq.q3": "म कहाँ मत दिन्छु?",
+"rules.faq.a3": "तपाईंको दर्ता ठेगानाको आधारमा मतदान केन्द्र निर्धारण हुन्छ। निर्वाचन कार्यालय वा आधिकारिक वेबसाइटमा हेर्नुहोस्।",
+
+"rules.faq.q4": "यदि मैले मतपत्रमा गल्ती गरें भने?",
+"rules.faq.a4": "मतदान कर्मचारीलाई भन्नुहोस् र नयाँ मतपत्र लिनुहोस्। आफैले काटछाँट नगर्नुहोस्।",
+
+"rules.help": "सहायता",
+
 
   },
 }

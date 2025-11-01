@@ -10,25 +10,25 @@ const Candidate = () => {
     {
       id: 1,
       name: 'Olivia Chen',
-      party: 'Liberty Party',
+      party: 'Nepali Congress',
       partyColor: 'text-blue-600',
-      district: 'North District',
+      district: 'Bagmat Provincei',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop',
       agenda: ['Economic reform and job creation', 'Environmental sustainability initiatives', 'Education system modernization']
     },
     {
       id: 2,
       name: 'Ben Carter',
-      party: 'Unity Party',
+      party: 'Rastriya Prajatantra Party',
       partyColor: 'text-red-600',
-      district: 'South District',
+      district: 'Bagmati Province',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
       agenda: ['Healthcare access for all citizens', 'Infrastructure development', 'Small business support programs']
     },
     {
       id: 3,
       name: 'Isabella Rodriguez',
-      party: 'Independent',
+      party: 'CPN-UML',
       partyColor: 'text-gray-600',
       district: 'North District',
       image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop',
@@ -37,54 +37,54 @@ const Candidate = () => {
     {
       id: 4,
       name: 'Marcus Thompson',
-      party: 'Liberty Party',
+      party: 'CPN-UML',
       partyColor: 'text-blue-600',
-      district: 'East District',
+      district: 'Sudarpaschim',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
       agenda: ['Public transportation expansion', 'Affordable housing initiatives', 'Youth employment programs']
     },
     {
       id: 5,
       name: 'Sarah Kim',
-      party: 'Unity Party',
+      party: 'Maoist',
       partyColor: 'text-red-600',
-      district: 'West District',
+      district: 'Gandaki Province',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
       agenda: ['Climate action policy', 'Mental health services', 'Technology sector growth']
     },
     {
       id: 6,
       name: 'James Mitchell',
-      party: 'Independent',
+      party: 'CPN-UML',
       partyColor: 'text-gray-600',
-      district: 'Central District',
+      district: 'Madhesh Province',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop',
       agenda: ['Local business revitalization', 'Parks and recreation funding', 'Senior citizen programs']
     },
     {
       id: 7,
       name: 'Emily Zhang',
-      party: 'Liberty Party',
+      party: 'Nepali Congress',
       partyColor: 'text-blue-600',
-      district: 'South District',
+      district: 'Bagmati Province',
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop',
       agenda: ['Arts and culture funding', 'Public safety reform', 'Green energy transition']
     },
     {
       id: 8,
       name: 'David Okonkwo',
-      party: 'Unity Party',
+      party: 'Rastriya Swatantra Party',
       partyColor: 'text-red-600',
-      district: 'East District',
+      district: 'Karnali Province',
       image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop',
       agenda: ['Immigration reform', 'Trade policy development', 'Veterans support services']
     },
     {
       id: 9,
       name: 'Rachel Foster',
-      party: 'Liberty Party',
+      party: 'CPN-UML',
       partyColor: 'text-blue-600',
-      district: 'West District',
+      district: 'Koshi Province',
       image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop',
       agenda: ['Education technology integration', 'Community safety programs', 'Economic diversity']
     }
