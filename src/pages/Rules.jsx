@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
 import Navigation from "../components/Navbar.jsx";
 import { useLanguage } from "../context/language-context";
 
@@ -165,8 +164,6 @@ export default function ElectionRules() {
           <span className="text-xl">?</span>
         </button>
       </div>
-
-      <Footer />
     </div>
   );
 }
