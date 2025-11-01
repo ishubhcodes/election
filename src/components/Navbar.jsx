@@ -65,7 +65,7 @@ export default function Navbar() {
             }`}
             aria-label="Switch to English"
           >
-            EN
+            🇺🇸
           </button>
           <button
             onClick={() => setLanguage("ne")}
@@ -74,7 +74,7 @@ export default function Navbar() {
             }`}
             aria-label="Switch to Nepali"
           >
-            NE
+            🇳🇵
           </button>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
             }`}
             aria-label="Switch to English"
           >
-            EN
+            🇺🇸
           </button>
           <button
             onClick={() => setLanguage("ne")}
@@ -98,7 +98,7 @@ export default function Navbar() {
             }`}
             aria-label="Switch to Nepali"
           >
-            NE
+            🇳🇵
           </button>
         </div>
 

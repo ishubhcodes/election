@@ -31,7 +31,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
-        className="w-full bg-cover bg-blur bg-black/40 bg-center text-white py-24 px-6 flex flex-col items-center justify-center text-center"
+        className="w-full bg-cover bg-blur bg-black/60 bg-center text-white py-24 px-6 flex flex-col items-center justify-center text-center"
         style={{
           backgroundImage: `url(${nepal})`,
           backgroundSize: "cover",
