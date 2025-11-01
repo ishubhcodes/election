@@ -93,7 +93,7 @@ export default function Home() {
                 key={stat.label} 
                 className="bg-white rounded-3xl p-12 text-center shadow-sm hover:shadow-md transition-shadow"
               >
-                <Icon className="w-16 h-16 text-green-700 mx-auto mb-6 stroke-[2.5]" />
+                <Icon className="w-16 h-16 text-blue-700 mx-auto mb-6 stroke-[2.5]" />
                 <p className="text-3xl font-bold mb-3 text-gray-900">{stat.value}</p>
                 <p className="text-gray-600 text-lg">{stat.label}</p>
               </div>

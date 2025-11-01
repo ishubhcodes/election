@@ -385,7 +385,7 @@ export default function VoteDemo() {
       {/* Right Panel */}
       <div className="w-full lg:w-1/5 bg-gray-100  border-gray-300 p-4 flex flex-col items-center">
         <h2 className="font-semibold text-gray-800 text-xl mb-10 text-center">
-          Error in Voting?
+          Voted mistakenly?
         </h2>
 
         {/* leave extra space between heading and button as requested (mb-10 above) */}
