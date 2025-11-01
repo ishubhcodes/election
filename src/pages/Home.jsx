@@ -48,62 +48,7 @@ export default function Home() {
         </Link>
       </section>
 
-          <section className="py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-semibold mb-6">Why Digital Literacy Matters</h2>
-              <p className="text-black-600 text-muted-foreground mb-6">
-                In Nepal's democratic journey, informed citizens are the foundation of fair elections. Digital literacy
-                helps voters understand the voting process, identify candidates, and make informed decisions.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span>Reduce invalid votes through proper education</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span>Empower all citizens regardless of age</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span>Strengthen democratic participation</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-muted rounded-lg p-8 flex items-center justify-center min-h-80">
-              <div className="text-center">
-                <div className="text-5xl mb-4">🗳️</div>
-                <p className="text-muted-foreground">Voting is your right, your voice, your responsibility</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-16 text-center text-gray-900">Our Impact</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {stats.map((stat) => {
-            const Icon = stat.icon;
-            return (
-              <div 
-                key={stat.label} 
-                className="bg-white rounded-3xl p-12 text-center shadow-sm hover:shadow-md transition-shadow"
-              >
-                <Icon className="w-16 h-16 text-green-700 mx-auto mb-6 stroke-[2.5]" />
-                <p className="text-3xl font-bold mb-3 text-gray-900">{stat.value}</p>
-                <p className="text-gray-600 text-lg">{stat.label}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-
-  {/* Key Information Section */}
+      {/* Key Information Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">Key Information</h2>
@@ -150,6 +95,62 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+          <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-semibold mb-6">Why Digital Literacy Matters</h2>
+              <p className="text-black-600 text-muted-foreground mb-6">
+                In Nepal's democratic journey, informed citizens are the foundation of fair elections. Digital literacy
+                helps voters understand the voting process, identify candidates, and make informed decisions.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                  <span>Reduce invalid votes through proper education</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                  <span>Empower all citizens regardless of age</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                  <span>Strengthen democratic participation</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-muted rounded-lg p-8 flex items-center justify-center min-h-80">
+              <div className="text-center">
+                <div className="text-5xl mb-4">🗳️</div>
+                <p className="text-muted-foreground">Voting is your right, your voice, your responsibility</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold mb-16 text-center text-gray-900">Our Impact</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {stats.map((stat) => {
+            const Icon = stat.icon;
+            return (
+              <div 
+                key={stat.label} 
+                className="bg-white rounded-3xl p-12 text-center shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Icon className="w-16 h-16 text-green-700 mx-auto mb-6 stroke-[2.5]" />
+                <p className="text-3xl font-bold mb-3 text-gray-900">{stat.value}</p>
+                <p className="text-gray-600 text-lg">{stat.label}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white mt-20">
