@@ -12,7 +12,7 @@ const Candidate = () => {
       name: 'Olivia Chen',
       party: 'Nepali Congress',
       partyColor: 'text-blue-600',
-      district: 'Bagmat Provincei',
+      district: 'Bagmati Province',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop',
       agenda: ['Economic reform and job creation', 'Environmental sustainability initiatives', 'Education system modernization']
     },
@@ -30,7 +30,7 @@ const Candidate = () => {
       name: 'Isabella Rodriguez',
       party: 'CPN-UML',
       partyColor: 'text-gray-600',
-      district: 'North District',
+      district: 'Koshi Province',
       image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop',
       agenda: ['Transparent governance', 'Community-led development', 'Digital innovation']
     },
@@ -39,7 +39,7 @@ const Candidate = () => {
       name: 'Marcus Thompson',
       party: 'CPN-UML',
       partyColor: 'text-blue-600',
-      district: 'Sudarpaschim',
+      district: 'Sudarpaschim Province',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
       agenda: ['Public transportation expansion', 'Affordable housing initiatives', 'Youth employment programs']
     },
@@ -100,9 +100,9 @@ const Candidate = () => {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <div className="text-sm text-gray-500 mb-2">Home / Candidates</div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Meet Your Candidates</h1>
-          <p className="text-gray-600">Filter by constituency or search by name to learn more about who is running.</p>
+          {/* <div className="text-sm text-gray-500 mb-2">Home / Candidates</div> */}
+          <h1 className="text-4xl font-bold text-gray-900 mb-2 mt-12 text-center">Meet Your Candidates</h1>
+          <p className="text-gray-600 text-center mb-4">Filter by constituency or search by name to learn more about who is running.</p>
         </div>
 
         <div className="flex gap-6">
@@ -142,11 +142,13 @@ const Candidate = () => {
                   className="w-full px-4 py-3 bg-gray-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none cursor-pointer"
                 >
                   <option value="all">All Constituencies</option>
-                  <option value="north">North District</option>
-                  <option value="south">South District</option>
-                  <option value="east">East District</option>
-                  <option value="west">West District</option>
-                  <option value="central">Central District</option>
+                  <option value="koshi">Koshi Province</option>
+                  <option value="madesh">Madesh Province</option>
+                  <option value="bagmati">Bagmati Province</option>
+                  <option value="gandaki">Gandaki Province</option>
+                  <option value="lumbini">Lumbini Province</option>
+                  <option value="karnali">Karnali Province</option>
+                  <option value="sudarpashim">Sudharpashim Province</option>
                 </select>
               </div>
 
