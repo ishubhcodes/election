@@ -30,19 +30,32 @@ const translations: Record<Language, Record<string, string>> = {
     "home.stats.resources": "Learning Resources",
 
     // Election Steps
-    "steps.title": "How to Vote in Nepal",
-    "steps.step1": "Verify Your Registration",
-    "steps.step1.desc": "Check if you are registered as a voter. Visit your local election office or check online.",
-    "steps.step2": "Get Your Voter ID",
-    "steps.step2.desc": "Collect your voter ID card from the designated center on or before election day.",
-    "steps.step3": "Locate Your Polling Station",
-    "steps.step3.desc":
-      "Find the polling station nearest to you. Check the official list provided by the election commission.",
-    "steps.step4": "Cast Your Vote",
-    "steps.step4.desc":
-      "Go to your polling station, verify your identity, and mark your ballot for your chosen candidate.",
-    "steps.step5": "Confirm Your Vote",
-    "steps.step5.desc": "Drop your ballot in the ballot box. Your vote is now securely cast and counted.",
+    "steps.hero.tag": "Your Guide To",
+    "steps.hero.title": "Election Process",
+    "steps.hero.subtitle": "What to do before and after voting?",
+    "steps.beforeElection": "Before Election Day",
+    "steps.afterElection": "After Election Day",
+
+    // --- Pre-election steps ---
+    "steps.pre.1.title": "Register to Vote",
+    "steps.pre.1.desc": "Complete your voter registration at least 30 days before the election. Click here to register.",
+    "steps.pre.2.title": "Research Candidates",
+    "steps.pre.2.desc": "Learn about each candidate's agenda, platform, experience, and positions on issues.",
+    "steps.pre.3.title": "Know Your Polling Location",
+    "steps.pre.3.desc": "Find out where you can vote - check for early voting options with voting starting at 7am and ending at 5pm.",
+    "steps.pre.4.title": "Prepare Required Documents",
+    "steps.pre.4.desc": "Gather your voter ID and/or citizenship ahead of time.",
+
+    // --- Post-election steps ---
+    "steps.post.1.title": "Vote Counting Begins",
+    "steps.post.1.desc": "Polls close and election officials begin counting ballots from all sources.",
+    "steps.post.2.title": "Initial Results Published",
+    "steps.post.2.desc": "Preliminary results are shared, though not all votes may be counted yet.",
+    "steps.post.3.title": "Official Certification",
+    "steps.post.3.desc": "Election results are officially verified and certified by election authorities.",
+    "steps.post.4.title": "Winners Take Office",
+    "steps.post.4.desc": "Elected officials are sworn in and begin their terms in office.",
+
 
     // Candidates
     "candidates.title": "Browse Candidates",
@@ -175,18 +188,29 @@ const translations: Record<Language, Record<string, string>> = {
     "home.stats.resources": "शिक्षण संसाधन",
 
     // Election Steps
-    "steps.title": "नेपालमा कसरी मत दिने",
-    "steps.step1": "आपनो दर्ता प्रमाणित गर्नुहोस्",
-    "steps.step1.desc":
-      "जाँच गर्नुहोस् कि आप मतदातको रूपमा दर्ता हुनुभएको छ। आपनो स्थानीय निर्वाचन कार्यालयमा गएर वा अनलाइनमा जाँच गर्नुहोस्।",
-    "steps.step2": "आपनो मतदाता पहिचान पत्र प्राप्त गर्नुहोस्",
-    "steps.step2.desc": "निर्दिष्ट केन्द्रबाट मतदाता पहिचान पत्र संकलन गर्नुहोस् वा मतदानको दिन पहिले।",
-    "steps.step3": "आपनो मतदान केन्द्र खोज्नुहोस्",
-    "steps.step3.desc": "आपनो नजिकको मतदान केन्द्र खोज्नुहोस्। निर्वाचन आयोगद्वारा प्रदान गरिएको आधिकारिक सूची जाँच गर्नुहोस्।",
-    "steps.step4": "आपनो मत दिनुहोस्",
-    "steps.step4.desc": "आपनो मतदान केन्द्रमा जानुहोस्, आपनो पहिचान प्रमाणित गर्नुहोस्, र आपनो पसंदको उम्मेदवारलाई मत दिनुहोस्।",
-    "steps.step5": "आपनो मत पुष्टि गर्नुहोस्",
-    "steps.step5.desc": "आपनो मतपत्र मत पेटीमा डाल्नुहोस्। आपनो मत अब सुरक्षित रूपमा दिइएको छ र गणना गरिनेछ।",
+    "steps.hero.tag": "तपाईंको मार्गदर्शक",
+    "steps.hero.title": "मतदान प्रक्रिया",
+    "steps.hero.subtitle": "मतदान अघि र पछि के गर्ने?",
+    "steps.pre.1.title": "मतदाता दर्ता गर्नुहोस्",
+    "steps.beforeElection": "निर्वाचन अघि",
+    "steps.afterElection": "निर्वाचन पछि",
+    "steps.pre.1.desc": "निर्वाचन मितिभन्दा कम्तिमा ३० दिन अघि आफ्नो मतदाता दर्ता पूरा गर्नुहोस्। दर्ता गर्न यहाँ क्लिक गर्नुहोस्।",
+    "steps.pre.2.title": "उम्मेदवारहरूको अध्ययन गर्नुहोस्",
+    "steps.pre.2.desc": "प्रत्येक उम्मेदवारको एजेन्डा, योजना, अनुभव र मुद्दाहरूमा उनीहरूको धारणा बुझ्नुहोस्।",
+    "steps.pre.3.title": "मतदान स्थल जान्नुहोस्",
+    "steps.pre.3.desc": "तपाईंले कहाँ मतदान गर्न सक्नुहुन्छ थाहा पाउनुहोस् - बिहान ७ बजेदेखि बेलुकी ५ बजेसम्मको प्रारम्भिक मतदान विकल्प पनि जाँच गर्नुहोस्।",
+    "steps.pre.4.title": "आवश्यक कागजात तयारी गर्नुहोस्",
+    "steps.pre.4.desc": "आफ्नो नागरिकता वा मतदाता परिचयपत्र पहिले नै संकलन गर्नुहोस्।",
+
+    // --- Post-election steps ---
+    "steps.post.1.title": "मतगणना सुरु हुन्छ",
+    "steps.post.1.desc": "मतदान समाप्त भएपछि निर्वाचन अधिकृतहरूले सबै स्रोतबाट मतपत्रहरू गणना गर्न सुरु गर्छन्।",
+    "steps.post.2.title": "प्रारम्भिक नतिजा प्रकाशित",
+    "steps.post.2.desc": "प्रारम्भिक नतिजा साझा गरिन्छ, यद्यपि सबै मतहरू गणना भइसकेको नहुन सक्छ।",
+    "steps.post.3.title": "औपचारिक प्रमाणिकरण",
+    "steps.post.3.desc": "निर्वाचन नतिजा आधिकारिक रूपमा प्रमाणीकरण र प्रमाणित गरिन्छ।",
+    "steps.post.4.title": "विजेताहरूले पदभार ग्रहण गर्छन्",
+    "steps.post.4.desc": "निर्वाचित अधिकारीहरूले पद ग्रहण गरी आफ्नो कार्यकाल सुरु गर्छन्।",
 
     // Candidates
     "candidates.title": "उम्मेदवारहरु ब्राउज गर्नुहोस्",
