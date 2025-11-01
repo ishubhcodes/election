@@ -7,17 +7,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
+  const { t } = useLanguage();
   // language context for toggle
   const { language, setLanguage } = useLanguage();
 
-  const navItems = [
-    { icon: Users, label: 'Candidates', path: '/candidates' },
-    { icon: BookOpen, label: 'Rules', path: '/rules' },
-    { icon: CheckCircle, label: 'Steps', path: '/steps' },
-    { icon: User, label: 'Practice', path: '/voteinfo' },
-    { icon: ClipboardCheck, label: 'Quiz', path: '/quiz' },
+ const navItems = [
+    { icon: Users, label: t("nav.candidates"), path: "/candidates" },
+    { icon: BookOpen, label: t("nav.rules"), path: "/rules" },
+    { icon: CheckCircle, label: t("nav.steps"), path: "/steps" },
+    { icon: User, label: t("nav.practice"), path: "/voteinfo" },
+    { icon: ClipboardCheck, label: t("nav.quiz"), path: "/quiz" },
   ];
+
 
   const handleNavigation = (path) => {
     navigate(path);
