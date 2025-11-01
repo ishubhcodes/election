@@ -111,6 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
     "practice.percentage": "Percentage",
 
     // Quiz
+    "quiz.pre": "Take an",
     "quiz.title": "Election Awareness Quiz",
     "quiz.desc": "Test your knowledge about the election process and voting system.",
     "quiz.question": "Question",
@@ -302,7 +303,8 @@ const translations: Record<Language, Record<string, string>> = {
     "practice.percentage": "प्रतिशत",
 
     // Quiz
-    "quiz.title": "मतदान सचेतना प्रश्नोत्तरी",
+    "quiz.pre":"एक",
+    "quiz.title": "मतदान सचेतना प्रश्नोत्तरी लिनुहोस्",
     "quiz.desc": "मतदान प्रक्रिया र मतदान प्रणालीको बारेमा आपनको ज्ञान परीक्षा गर्नुहोस्।",
     "quiz.question": "प्रश्न",
     "quiz.of": "को",
