@@ -12,7 +12,7 @@ const Candidate = () => {
       name: 'Olivia Chen',
       party: 'Nepali Congress',
       partyColor: 'text-blue-600',
-      district: 'Bagmat Provincei',
+      district: 'Bagmati Province',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop',
       agenda: ['Economic reform and job creation', 'Environmental sustainability initiatives', 'Education system modernization']
     },
@@ -142,11 +142,13 @@ const Candidate = () => {
                   className="w-full px-4 py-3 bg-gray-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none cursor-pointer"
                 >
                   <option value="all">All Constituencies</option>
-                  <option value="north">North District</option>
-                  <option value="south">South District</option>
-                  <option value="east">East District</option>
-                  <option value="west">West District</option>
-                  <option value="central">Central District</option>
+                  <option value="north">Bagmati Province</option>
+                  <option value="south">Lumbini Province</option>
+                  <option value="east">Madhesh Province</option>
+                  <option value="west">Karnali Province</option>
+                  <option value="west">Sudarpaschim Province</option>
+                  <option value="west">Koshi Province</option>
+                  <option value="central">Gandaki Province</option>
                 </select>
               </div>
 

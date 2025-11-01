@@ -12,6 +12,7 @@ import {
   Barrel,
   BeanIcon,
 } from "lucide-react";
+import { useLanguage } from "../context/language-context";
 import swastik from "../assets/swastik.png";
 
 const NUM_COLUMNS = 6;
@@ -36,6 +37,7 @@ const rowIcons = [
 ];
 
 export default function VoteDemo() {
+  const { t, language } = useLanguage();
   const [placedStamps, setPlacedStamps] = useState([]);
   const gridRef = useRef(null);
   const leftBoxRef = useRef(null);
@@ -187,6 +189,7 @@ export default function VoteDemo() {
       }
 
       // enforce: only one stamp per column
+      // enforce: if multiple stamps cast in same column → column vote invalid
       const stampsInColumn = placedStamps.filter((stamp) => {
         const placedCellData = cellRectsRef.current.find(
           (r) => r.index === stamp.index
@@ -195,7 +198,19 @@ export default function VoteDemo() {
       });
 
       if (stampsInColumn.length > 0) {
-        toast.error("Invalid Vote — only one stamp per column is allowed.");
+        // Remove all stamps in this column (invalidate the column vote)
+        setPlacedStamps((prev) =>
+          prev.filter((s) => {
+            const placedCellData = cellRectsRef.current.find(
+              (r) => r.index === s.index
+            );
+            return placedCellData.col !== cell.col;
+          })
+        );
+
+        toast.error("Vote for this column is invalid due to multiple voting.");
+
+        // Reset draggable position
         const s = startPosRef.current;
         setDrag((d) => ({ ...d, x: s.x, y: s.y }));
         return;
@@ -251,7 +266,7 @@ export default function VoteDemo() {
         className="w-full lg:w-1/5 bg-gray-100 p-6 flex flex-col items-center"
       >
         <h2 className="font-semibold text-gray-800 text-xl mb-6 text-center">
-          Drag the stamp from here
+          {t("demo.head")}
         </h2>
 
         {/* preview stamp inside box (normal flow, not affected by dragging) */}
@@ -265,7 +280,7 @@ export default function VoteDemo() {
         </div>
 
         <p className="text-sm text-gray-600 mt-6 text-center">
-          Drag the stamp onto the ballot to cast your vote
+          {t("demo.text")}
         </p>
 
         {/* Fixed draggable stamp only visible while dragging */}
@@ -293,7 +308,7 @@ export default function VoteDemo() {
           onPointerDown={onStampPointerDown}
           className="mt-6 bg-gray-200 px-3 py-2 rounded text-sm"
         >
-          Pick up stamp
+          {t("demo.stamp")}
         </button>
       </div>
 
@@ -385,7 +400,7 @@ export default function VoteDemo() {
       {/* Right Panel */}
       <div className="w-full lg:w-1/5 bg-gray-100  border-gray-300 p-4 flex flex-col items-center">
         <h2 className="font-semibold text-gray-800 text-xl mb-10 text-center">
-          Voted mistakenly?
+          {t("demo.lhead")}
         </h2>
 
         {/* leave extra space between heading and button as requested (mb-10 above) */}
@@ -393,7 +408,7 @@ export default function VoteDemo() {
           onClick={handleReset}
           className="bg-red-600 hover:bg-red-700 text-white font-semibold text-lg px-6 py-3 rounded-md transition w-full"
         >
-          Restart Voting
+          {t("demo.button")}
         </button>
       </div>
     </div>
