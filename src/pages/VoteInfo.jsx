@@ -9,11 +9,12 @@ export default function VoteInfo() {
     <div className="min-h-screen bg-gray-50 px-4 py-12 text-left">
       <div className="max-w-5xl mx-auto space-y-10">
 
-        <div className="space-y-2">
-          <span class="text-gray-600 text-center text-sm font-semibold uppercase tracking-wider block mb-3">
-    Your guide to
-  </span>
-          <h1 className="text-4xl font-semibold text-center text-red-900 tracking-tight">
+        <div className="space-y-2 text-center">
+          <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider block mb-3">
+            {t("steps.hero.tag")}
+          </span>
+
+          <h1 className="text-4xl font-semibold text-center text-red-900 tracking-tight mb-4">
             {t("voteInfo.title")}
           </h1>
           <p className="text-gray-600 text-center text-base font-normal">
