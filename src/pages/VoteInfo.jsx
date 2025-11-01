@@ -10,10 +10,13 @@ export default function VoteInfo() {
       <div className="max-w-5xl mx-auto space-y-10">
 
         <div className="space-y-2">
-          <h1 className="text-4xl font-semibold text-red-900 tracking-tight">
+          <span class="text-gray-600 text-center text-sm font-semibold uppercase tracking-wider block mb-3">
+    Your guide to
+  </span>
+          <h1 className="text-4xl font-semibold text-center text-red-900 tracking-tight">
             {t("voteInfo.title")}
           </h1>
-          <p className="text-gray-600 text-base font-normal">
+          <p className="text-gray-600 text-center text-base font-normal">
             {t("voteInfo.subtitle")}
           </p>
         </div>

@@ -1,5 +1,4 @@
 import ElectionStepsSection  from "../components/ElectionSteps.jsx";
-import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 import Navigation from "../components/Navbar.jsx";
 import { BookOpen, CheckCircle, Users } from "lucide-react";
@@ -25,8 +24,6 @@ export default function App() {
 
   {/* Election Steps - Full width */}
   <ElectionStepsSection />
-  
-  <Footer/>
 </div>
 
   );

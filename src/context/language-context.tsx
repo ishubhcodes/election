@@ -12,22 +12,56 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
-    "nav.home": "Home",
-    "nav.election": "Election Steps",
     "nav.candidates": "Candidates",
-    "nav.practice": "Practice Election",
+    "nav.rules": "Rules",
+    "nav.steps": "Steps",
+    "nav.practice": "Practice",
     "nav.quiz": "Quiz",
-    "nav.about": "About",
 
-    // Home
-    "home.title": "SmartVote Nepal",
-    "home.subtitle": "Digital Literacy for Elections",
-    "home.description":
-      "Learn how to vote, understand the voting process, and participate in democracy with confidence.",
-    "home.cta": "Get Started",
-    "home.stats.voters": "Potential Voters",
-    "home.stats.regions": "Regions Covered",
-    "home.stats.resources": "Learning Resources",
+   "home.hero.title": "Your Voice, Your Vote: Get Ready for 2082",
+    "home.hero.desc": "Find everything you need to know about candidates, voting procedures, and key election dates.",
+    "home.hero.cta": "Get Started",
+
+    "home.keyInfo.title": "Key Information",
+    "home.keyInfo.desc": "Stay informed and prepared for the upcoming election.",
+
+    "home.card.candidates.title": "Candidates Information",
+    "home.card.candidates.desc": "The details regarding candidates who are standing in the elections.",
+    "home.card.candidates.cta": "View Candidates",
+
+    "home.card.rules.title": "Rules",
+    "home.card.rules.desc": "Stay informed with the rules and regulations of the election voting system.",
+    "home.card.rules.cta": "Read Rules",
+
+    "home.card.practice.title": "Practice Voting",
+    "home.card.practice.desc": "Use our sample ballot paper to simulate real world election system.",
+    "home.card.practice.cta": "Practice",
+
+    "home.digitalLit.title": "Why Digital Literacy Matters",
+    "home.digitalLit.desc": "In Nepal's democratic journey, informed citizens are the foundation of fair elections. Digital literacy helps voters understand the voting process, identify candidates, and make informed decisions.",
+    "home.digitalLit.point1": "Reduce invalid votes through proper education",
+    "home.digitalLit.point2": "Empower all citizens regardless of age",
+    "home.digitalLit.point3": "Strengthen democratic participation",
+    "home.digitalLit.rights": "Voting is your right, your voice, your responsibility",
+
+    "home.impact.title": "Our Aim",
+    "home.stats.invalidVotes": "Invalid Votes Prevent",
+    "home.stats.educated": "Citizens Educated",
+    "home.stats.quiz": "Quiz Completions",
+
+    "home.footer.brand": "NepalVotes",
+    "home.footer.brand.desc": "Empowering citizens through digital literacy and election awareness.",
+    "home.footer.nav": "Navigation",
+    "home.footer.resources": "Resources",
+    "home.footer.social": "Follow Us",
+    "home.footer.links.home": "Home",
+    "home.footer.links.steps": "Election Steps",
+    "home.footer.links.practice": "Practice",
+    "home.footer.links.voteInfo": "Vote Info",
+    "home.footer.links.candidates": "Candidates",
+    "home.footer.links.rules": "Rules",
+    "home.footer.links.contact": "Contact",
+    "home.footer.copyright": "All rights reserved. Designed for civic awareness.",
 
     // Election Steps
     "steps.hero.tag": "Your Guide To",
@@ -85,6 +119,7 @@ const translations: Record<Language, Record<string, string>> = {
     "practice.percentage": "Percentage",
 
     // Quiz
+    "quiz.pre": "Take an",
     "quiz.title": "Election Awareness Quiz",
     "quiz.desc":
       "Test your knowledge about the election process and voting system.",
@@ -193,22 +228,57 @@ const translations: Record<Language, Record<string, string>> = {
   },
   ne: {
     // Navigation
-    "nav.home": "होम",
-    "nav.election": "मतदानको चरण",
-    "nav.candidates": "उम्मेदवारहरु",
-    "nav.practice": "अभ्यास मतदान",
-    "nav.quiz": "प्रश्नोत्तरी",
-    "nav.about": "बारे",
+    "nav.candidates": "उम्मेदवारहरू",
+    "nav.rules": "नियमहरू",
+    "nav.steps": "चरणहरू",
+    "nav.practice": "अभ्यास",
+    "nav.quiz": "प्रश्नोत्तर",
 
     // Home
-    "home.title": "स्मार्टभोट नेपाल",
-    "home.subtitle": "चुनावका लागि डिजिटल साक्षरता",
-    "home.description":
-      "कसरी मत दिने, मतदान प्रक्रिया बुझ्नुहोस्, र आत्मविश्वासका साथ लोकतन्त्रमा भाग लिनुहोस्।",
-    "home.cta": "सुरु गर्नुहोस्",
-    "home.stats.voters": "सम्भावित मतदाता",
-    "home.stats.regions": "कभर गरिएको क्षेत्र",
-    "home.stats.resources": "शिक्षण संसाधन",
+    "home.hero.title": "तपाईंको आवाज, तपाईंको मत: २०८२ का लागि तयार हुनुहोस्",
+    "home.hero.desc": "उम्मेदवारहरू, मतदान प्रक्रिया, र प्रमुख निर्वाचन मितिहरूको सबै जानकारी पाउनुहोस्।",
+    "home.hero.cta": "सुरु गर्नुहोस्",
+
+    "home.keyInfo.title": "मुख्य जानकारी",
+    "home.keyInfo.desc": "आउँदो निर्वाचनको लागि सचेत र तयार रहनुहोस्।",
+
+    "home.card.candidates.title": "उम्मेदवारहरूको जानकारी",
+    "home.card.candidates.desc": "निर्वाचनमा भाग लिइरहेका उम्मेदवारहरूको विवरण।",
+    "home.card.candidates.cta": "उम्मेदवारहरू हेर्नुहोस्",
+
+    "home.card.rules.title": "नियमहरू",
+    "home.card.rules.desc": "निर्वाचन प्रणालीका नियम र प्रावधानहरूको जानकारी राख्नुहोस्।",
+    "home.card.rules.cta": "नियमहरू पढ्नुहोस्",
+
+    "home.card.practice.title": "अभ्यास मतदान",
+    "home.card.practice.desc": "हाम्रो नमूना मतपत्र प्रयोग गरी वास्तविक निर्वाचन प्रक्रिया अभ्यास गर्नुहोस्।",
+    "home.card.practice.cta": "अभ्यास गर्नुहोस्",
+
+    "home.digitalLit.title": "डिजिटल साक्षरता किन महत्वपूर्ण छ",
+    "home.digitalLit.desc": "नेपालको लोकतान्त्रिक यात्रामा, सचेत नागरिक निष्पक्ष निर्वाचनको आधार हुन्। डिजिटल साक्षरता मतदातालाई मतदान प्रक्रिया बुझ्न, उम्मेदवारहरू चिनाउन, र सचेत निर्णय लिन मद्दत गर्दछ।",
+    "home.digitalLit.point1": "सही शिक्षा मार्फत अमान्य मत घटाउनुहोस्",
+    "home.digitalLit.point2": "उमेरको भेदभाव बिना सबै नागरिकलाई सशक्त बनाउनुहोस्",
+    "home.digitalLit.point3": "लोकतान्त्रिक सहभागिता बलियो बनाउनुहोस्",
+    "home.digitalLit.rights": "मत दिनु तपाईंको अधिकार, तपाईंको आवाज, तपाईंको जिम्मेवारी हो",
+
+    "home.impact.title": "हाम्रो लक्ष्य",
+    "home.stats.invalidVotes": "अमान्य मत रोकियो",
+    "home.stats.educated": "सचेत नागरिकहरू",
+    "home.stats.quiz": "प्रश्नोत्तरी पूरा भयो",
+
+    "home.footer.brand": "नेपालभोट्स",
+    "home.footer.brand.desc": "डिजिटल साक्षरता र निर्वाचन सचेतनाको माध्यमबाट नागरिकलाई सशक्त बनाउँदै।",
+    "home.footer.nav": "नेविगेशन",
+    "home.footer.resources": "स्रोतहरू",
+    "home.footer.social": "हामीलाई फलो गर्नुहोस्",
+    "home.footer.links.home": "होम",
+    "home.footer.links.steps": "निर्वाचन चरणहरू",
+    "home.footer.links.practice": "अभ्यास",
+    "home.footer.links.voteInfo": "मत जानकारी",
+    "home.footer.links.candidates": "उम्मेदवारहरू",
+    "home.footer.links.rules": "नियमहरू",
+    "home.footer.links.contact": "सम्पर्क",
+    "home.footer.copyright": "सबै अधिकार सुरक्षित। नागरिक सचेतनाका लागि डिजाइन गरिएको।",
 
     // Election Steps
     "steps.hero.tag": "तपाईंको मार्गदर्शक",
@@ -263,9 +333,9 @@ const translations: Record<Language, Record<string, string>> = {
     "practice.percentage": "प्रतिशत",
 
     // Quiz
-    "quiz.title": "मतदान सचेतना प्रश्नोत्तरी",
-    "quiz.desc":
-      "मतदान प्रक्रिया र मतदान प्रणालीको बारेमा आपनको ज्ञान परीक्षा गर्नुहोस्।",
+    "quiz.pre":"एक",
+    "quiz.title": "मतदान सचेतना प्रश्नोत्तरी लिनुहोस्",
+    "quiz.desc": "मतदान प्रक्रिया र मतदान प्रणालीको बारेमा आपनको ज्ञान परीक्षा गर्नुहोस्।",
     "quiz.question": "प्रश्न",
     "quiz.of": "को",
     "quiz.next": "अगाडि",

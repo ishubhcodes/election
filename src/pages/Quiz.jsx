@@ -100,14 +100,17 @@ export default function QuizPage() {
   return (
     <div className="w-full">
       {/* Header */}
-      <section className="py-12 px-4 bg-gradient-to-b from-primary/10 to-transparent">
+      <section className="py-12 px-4 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("quiz.title")}</h1>
-          <p className="text-lg text-muted-foreground">{t("quiz.desc")}</p>
+          <span class="text-blue-600 text-center text-sm font-semibold uppercase tracking-wider block mb-3">
+          {t("quiz.pre")}
+      </span>
+          <h1 className="text-4xl text-center font-bold text-gray-900">{t("quiz.title")}</h1>
+          <p className="text-gray-600 text-center text-lg max-w-2xl mx-auto mt-1">{t("quiz.desc")}</p>
         </div>
       </section>
       {/* Quiz */}
-      <section className="py-16 px-4">
+      <section className="py-6 px-4 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
             <div className="flex items-center justify-between mb-4">
