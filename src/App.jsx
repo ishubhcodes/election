@@ -6,7 +6,7 @@ import Steps from "./pages/Steps";
 import Rules from "./pages/Rules";
 import Demo from "./pages/VoteDemo";
 import VoteInfo from "./pages/VoteInfo";
-import Candidates from "./pages/Candidates,";
+import Candidates from "./pages/Candidates";
 import { Toaster } from "sonner";
 import Home from "./pages/Home";
 import Navbar from './components/Navbar';
