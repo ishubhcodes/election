@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/rules" element={<Rules />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/voteinfo" element={<VoteInfo />} />
-        <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-96 h-16' }} />
+        {/* <Toaster position='top-right' richColors toastOptions={{ className: 'text-xl p-6 w-96 h-16' }} /> */}
       </Routes>
     </Router>
 
