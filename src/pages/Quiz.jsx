@@ -105,7 +105,7 @@ export default function QuizPage() {
           <span class="text-blue-600 text-center text-sm font-semibold uppercase tracking-wider block mb-3">
           {t("quiz.pre")}
       </span>
-          <h1 className="text-4xl text-center font-bold text-gray-900">{t("quiz.title")}</h1>
+          <h1 className="text-4xl text-center font-bold text-gray-900 mb-4">{t("quiz.title")}</h1>
           <p className="text-gray-600 text-center text-lg max-w-2xl mx-auto mt-1">{t("quiz.desc")}</p>
         </div>
       </section>
