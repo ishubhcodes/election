@@ -105,7 +105,7 @@ const Candidate = () => {
           <p className="text-gray-600 text-center mb-4">Filter by constituency or search by name to learn more about who is running.</p>
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row gap-6">
           {/* Sidebar Filter */}
           <div className="w-80 flex-shrink-0">
             <div className="bg-white rounded-lg p-6 shadow-sm">
