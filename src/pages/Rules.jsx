@@ -31,11 +31,11 @@ export default function ElectionRules() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 ">
+    <div className="min-h-screen bg-gray-50 w-full">
         <div className="mb-12">
 
       {/* Main Content */}
-      <main className="bg-gradient-to-b from-blue-50 to-white  px-4 sm:px-6 lg:px-8">
+      <main className="bg-gradient-to-b from-blue-50 to-white  ">
         {/* Header */}
         <div className="bg-gradient-to-b from-white to-blue-50 text-center mb-12 pt-12">
             <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider block mb-3">
@@ -50,9 +50,9 @@ export default function ElectionRules() {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 px-12">
           {/* Who Can Vote Section */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+          <div className="bg-blue-50 rounded-lg shadow-sm border border-gray-200 p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Who Can Vote?
             </h2>
@@ -93,7 +93,7 @@ export default function ElectionRules() {
           </div>
 
           {/* Important Dates Section */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+          <div className="bg-green-45 rounded-lg shadow-sm border border-gray-200 p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Important Dates
             </h2>
@@ -127,7 +127,7 @@ export default function ElectionRules() {
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 py-8 px-12">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Frequently Asked Questions
           </h2>
