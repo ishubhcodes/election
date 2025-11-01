@@ -158,7 +158,9 @@ export default function VoteDemo() {
 
       if (intersecting.length === 0) {
         // dropped outside grid - return to start
-        toast.error("Drop inside a cell to vote");
+        toast.error(language === "en" 
+          ? "Drop inside a cell to vote" 
+          : "सेल भित्र ड्रप गरेर मतदान गर्नुहोस्");
         // reset to preview location
         const s = startPosRef.current;
         setDrag((d) => ({ ...d, x: s.x, y: s.y }));
@@ -166,7 +168,11 @@ export default function VoteDemo() {
       }
 
       if (intersecting.length > 1) {
-        toast.error("Invalid Vote — stamp overlaps multiple cells");
+        toast.error(
+          language === "en"
+            ? "Invalid Vote — stamp overlaps multiple cells"
+            : "अवैध मतदान — स्ट्याम्प धेरै वटा बक्सामा हाल्नु भयो"
+        );
         // reset
         const s = startPosRef.current;
         setDrag((d) => ({ ...d, x: s.x, y: s.y }));
@@ -208,7 +214,11 @@ export default function VoteDemo() {
           })
         );
 
-        toast.error("Vote for this column is invalid due to multiple voting.");
+        toast.error(
+          language === "en"
+            ? "Vote for this column is invalid due to multiple voting."
+            : "यो स्तम्भमा भोट रद्ध भएको छ किनभने धेरै पटक भोट गरिएको छ।"
+        );
 
         // Reset draggable position
         const s = startPosRef.current;
@@ -223,7 +233,11 @@ export default function VoteDemo() {
         ...prev,
         { index: cell.index, dropX, dropY, id: Date.now() },
       ]);
-      toast.success("Valid Vote ✅");
+     toast.success(
+      language === "en"
+        ? "Valid Vote ✅"
+        : "वैध भोट ✅"
+    );
 
       // return draggable to preview start position
       const s = startPosRef.current;
