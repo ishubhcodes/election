@@ -1,7 +1,7 @@
 import { Users, BookOpen, CheckCircle, User, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useLanguage } from '@/context/language-context'; // your language context hook
+import { useLanguage } from '../context/language-context'; // your language context hook
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

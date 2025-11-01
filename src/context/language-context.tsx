@@ -75,6 +75,8 @@ const translations: Record<Language, Record<string, string>> = {
     "quiz.answer": "Your Answer",
     "quiz.correct": "Correct Answer",
     "quiz.explanation": "Explanation",
+    "quiz.submit": "Submit Answer",
+
 
     // About
     "about.title": "About SmartVote Nepal",
@@ -96,6 +98,28 @@ const translations: Record<Language, Record<string, string>> = {
     "common.cancel": "Cancel",
     "common.yes": "Yes",
     "common.no": "No",
+
+        // Vote Info
+    "voteInfo.title": "Practice Voting in the Ballot Paper",
+    "voteInfo.subtitle": "Your complete guide to casting your ballot and making your voice heard.",
+
+    "voteInfo.section.ballot": "Ballot Paper Description",
+    "voteInfo.ballot.desc": "Ballot Paper consists of:",
+    "voteInfo.ballot.point1": "The column represents the post to be allocated to the party.",
+    "voteInfo.ballot.point2": "The row represents the political party.",
+    "voteInfo.ballot.point3": "Fold the ballot paper carefully.",
+
+    "voteInfo.section.fill": "Fill the Ballot Paper",
+    "voteInfo.fill.desc": "Take the stamp from the side and click inside the cell where you want to cast your vote.",
+
+    "voteInfo.section.errors": "Errors to Avoid",
+    "voteInfo.errors.desc": "Failing to follow these rules may result in an invalid vote:",
+    "voteInfo.errors.point1": "Ensure the stamp stays fully inside the chosen cell.",
+    "voteInfo.errors.point2": "Do not overlap the stamp across multiple cells.",
+    "voteInfo.errors.point3": "Only select one cell per column.",
+
+    "voteInfo.practiceButton": "Practice Voting",
+
   },
   ne: {
     // Navigation
@@ -160,6 +184,7 @@ const translations: Record<Language, Record<string, string>> = {
     "quiz.answer": "आपनको जवाफ",
     "quiz.correct": "सही उत्तर",
     "quiz.explanation": "व्याख्या",
+    "quiz.submit": "पेश गर्नुहोस्",
 
     // About
     "about.title": "स्मार्टभोट नेपालको बारेमा",
@@ -180,6 +205,28 @@ const translations: Record<Language, Record<string, string>> = {
     "common.cancel": "रद्द गर्नुहोस्",
     "common.yes": "हो",
     "common.no": "होइन",
+
+        // Vote Info
+    "voteInfo.title": "मतपत्रमा अभ्यास मतदान",
+    "voteInfo.subtitle": "आपको मत कसरी दिनु, र आफ्नो आवाज कसरी सुनिश्चित गर्ने भन्ने पूर्ण मार्गदर्शन।",
+
+    "voteInfo.section.ballot": "मतपत्रको विवरण",
+    "voteInfo.ballot.desc": "मतपत्रमा निम्न कुरा हुन्छन्:",
+    "voteInfo.ballot.point1": "स्तम्भले पार्टीलाई दिइने पद दर्शाउँछ।",
+    "voteInfo.ballot.point2": "पङ्क्तिले राजनीतिक पार्टीलाई दर्शाउँछ।",
+    "voteInfo.ballot.point3": "मतपत्र सचेत रूपमा भाँच्चिनुहोस्।",
+
+    "voteInfo.section.fill": "मतपत्र भर्ने तरिका",
+    "voteInfo.fill.desc": "बाहिरको तर्फ रहेको छाप लिई आफ्नो चाहेको कोषमा क्लिक गर्नुहोस्।",
+
+    "voteInfo.section.errors": "कुनै गल्ती नगरौं",
+    "voteInfo.errors.desc": "यी नियमहरू नमान्दा तपाईँको मत अमान्य हुन सक्छ:",
+    "voteInfo.errors.point1": "छाप पूरै चयन गरिएको कोषभित्र मात्र रहनु पर्छ।",
+    "voteInfo.errors.point2": "छाप धेरै कोषमा नफैलियोस्।",
+    "voteInfo.errors.point3": "प्रत्येक स्तम्भमा केवल एक कोष मात्र चयन गर्नुहोस्।",
+
+    "voteInfo.practiceButton": "अभ्यास मतदान",
+
   },
 }
 
